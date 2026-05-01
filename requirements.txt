@@ -1,1 +1,5 @@
-# librerías de Python necesarias para ejecutar el proyecto
+# Python dependencies for the exploratory churn app
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+shiny>=1.0.0

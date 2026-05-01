@@ -1,0 +1,62 @@
+[
+  {
+    "dataset": "churn_target",
+    "rows_raw": 321987,
+    "rows_clean": 321987,
+    "dropped_rows": 0,
+    "exact_duplicates_raw": 0,
+    "key_duplicates_raw": 0,
+    "key_duplicates_clean": 0,
+    "notes": "El target ya venia bastante limpio; se normalizaron fechas y se garantizo unicidad cliente-mes."
+  },
+  {
+    "dataset": "clientes",
+    "rows_raw": 10150,
+    "rows_clean": 10000,
+    "dropped_rows": 150,
+    "exact_duplicates_raw": 150,
+    "key_duplicates_raw": 150,
+    "key_duplicates_clean": 0,
+    "notes": "Se eliminaron duplicados, se corrigieron antiguedades imposibles y se imputaron faltantes estructurales por tipo_plan."
+  },
+  {
+    "dataset": "facturacion_mensual",
+    "rows_raw": 326816,
+    "rows_clean": 320987,
+    "dropped_rows": 5829,
+    "exact_duplicates_raw": 4829,
+    "key_duplicates_raw": 4829,
+    "key_duplicates_clean": 0,
+    "notes": "Se quitaron duplicados cliente-mes, se completaron tipo_plan/zona/num_lineas desde clientes y se reconstruyo importe_total cuando faltaba."
+  },
+  {
+    "dataset": "calidad_senal_zona_mensual",
+    "rows_raw": 1096,
+    "rows_clean": 1076,
+    "dropped_rows": 20,
+    "exact_duplicates_raw": 16,
+    "key_duplicates_raw": 16,
+    "key_duplicates_clean": 0,
+    "notes": "Se deduplico zona-mes y se imputaron faltantes temporales por interpolacion dentro de cada zona."
+  },
+  {
+    "dataset": "encuestas_texto",
+    "rows_raw": 1015,
+    "rows_clean": 1000,
+    "dropped_rows": 15,
+    "exact_duplicates_raw": 15,
+    "key_duplicates_raw": 15,
+    "key_duplicates_clean": 0,
+    "notes": "Se eliminaron encuestas repetidas y se invalidaron respuestas fuera de rango para que no sesguen agregados zonales."
+  },
+  {
+    "dataset": "interacciones_soporte",
+    "rows_raw": 308487,
+    "rows_clean": 303929,
+    "dropped_rows": 4558,
+    "exact_duplicates_raw": 4558,
+    "key_duplicates_raw": 4558,
+    "key_duplicates_clean": 0,
+    "notes": "Se consolidaron eventos unicos, se alineo el mes con la fecha del evento y se imputaron duraciones/satisfaccion por canal."
+  }
+]
